@@ -5,7 +5,7 @@ const Producto = require('./models/Producto');
 const Usuario = require('./models/Usuario');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 conectarDB();
 
@@ -64,5 +64,5 @@ app.post('/api/usuarios/login', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`📡 Servidor de VetCare corriendo en: http://localhost:${PORT}`);
+    console.log(`🚀 Servidor corriendo en el puerto ${PORT}`);
 });
